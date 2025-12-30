@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartMoney | Personal Finance Guide</title>
+  <meta name="description" content="Learn personal finance, budgeting, saving, investing, and money management tips." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 40px 20px;
+      text-align: center;
+      background: #e0e7ff;
+    }
+    .hero h2 {
+      font-size: 2rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+    footer {
+      background: #111827;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .calculator input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+    .calculator button {
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .calculator button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SmartMoney</h1>
+  <nav>
+    <a href="#budget">Budgeting</a>
+    <a href="#saving">Saving</a>
+    <a href="#investing">Investing</a>
+    <a href="#calculator">Calculator</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Take Control of Your Money</h2>
+  <p>Simple guides on budgeting, saving, and investing for a secure future.</p>
+</section>
+
+<div class="container">
+  <section class="cards">
+    <div class="card" id="budget">
+      <h3>Budgeting</h3>
+      <p>Track income and expenses. Follow the 50/30/20 rule to manage your money wisely.</p>
+    </div>
+    <div class="card" id="saving">
+      <h3>Saving</h3>
+      <p>Build an emergency fund, set goals, and save consistently for future needs.</p>
+    </div>
+    <div class="card" id="investing">
+      <h3>Investing</h3>
+      <p>Learn about mutual funds, stocks, SIPs, and long-term wealth creation.</p>
+    </div>
+  </section>
+
+  <section class="card calculator" id="calculator" style="margin-top:30px;">
+    <h3>Simple Savings Calculator</h3>
+    <input type="number" id="monthly" placeholder="Monthly Saving (₹)" />
+    <input type="number" id="months" placeholder="Number of Months" />
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+  </section>
+</div>
+
+<footer>
+  <p>© 2025 SmartMoney | Learn Personal Finance</p>
+</footer>
+
+<script>
+  function calculate() {
+    const monthly = document.getElementById('monthly').value;
+    const months = document.getElementById('months').value;
+    const total = monthly * months;
+    document.getElementById('result').innerText = total ? `Total Savings: ₹${total}` : '';
+  }
+</script>
+
+</body
